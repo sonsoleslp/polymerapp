@@ -9,7 +9,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 
+<link rel="import" href="../bower_components/gold-cc-input/gold-cc-input.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <dom-module id="my-view1">
 
   <template>
@@ -27,6 +30,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: #fff;
         color: #757575;
       }
+
+       paper-card {
+        width: 33%;
+      }
+      @media (max-width: 800px) {
+        paper-card {
+         width: 100%;
+        }
+      }
+      @media (min-width: 800px)  and (max-width: 1200px) {
+        paper-card {
+         width: 49%;
+        }
+      }
       .circle {
         display: inline-block;
         height: 64px;
@@ -43,6 +60,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+      .white{
+        --paper-card-header-color: white;
+      }
     </style>
 
     <div class="card">
@@ -50,6 +70,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h1>View One</h1>
       <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
       <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+  
+      <gold-cc-input></gold-cc-input>
+ 
+      <paper-card heading="Emmental" image="http://placehold.it/350x150/FFC107/000000" alt="Emmental">
+        <div class="card-content">
+          Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+        </div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore!</paper-button>
+        </div>
+      </paper-card>
+      <paper-card heading="Flowers" image="http://placehold.it/350x150/EA00EA/FFFFFF" class="white" alt="Flowers">
+        <div class="card-content">
+          Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+        </div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore!</paper-button>
+        </div>
+      </paper-card>
+      <paper-card heading="Cologne" image="http://placehold.it/350x150/00BCD4/FFFFFF" class="white" alt="Flowers">
+        <div class="card-content">
+          Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+        </div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore!</paper-button>
+        </div>
+      </paper-card>
     </div>
 
   </template>
